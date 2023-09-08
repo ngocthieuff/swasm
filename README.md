@@ -19,3 +19,12 @@ swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
 // result
 <unknown>:0: error: unable to load standard library for target 'wasm32-unknown-wasi'
 ```
+
+I tried to run hello.swift file
+```console
+swift hello.swift
+
+// it works, of course, nothing wrong with it
+// Hello, Ngoc!
+// Hello, Ngoc!!
+```
