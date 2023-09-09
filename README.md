@@ -55,3 +55,17 @@ source ~/.bash_profile
 swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
 ```
 
+```console
+wasmer hello.wasm
+```
+
+### another way using swift package manager:
+
+```console
+swift package init --type executable
+
+swift build --triple wasm32-unknown-wasi
+
+wasmer ./.build/debug/hello-swiftwasm.wasm
+```
+
