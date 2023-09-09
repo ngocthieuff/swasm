@@ -69,3 +69,8 @@ swift build --triple wasm32-unknown-wasi
 wasmer ./.build/debug/hello-swiftwasm.wasm
 ```
 
+#### create a browser app
+```console
+mkdir carton-web
+carton init
+```
