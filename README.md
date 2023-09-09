@@ -28,3 +28,30 @@ swift hello.swift
 // Hello, Ngoc!
 // Hello, Ngoc!!
 ```
+
+
+... download another version
+swift-wasm-5.8.0-RELEASE-macos_x86_64.pkg
+
+```console
+swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
+SwiftDriver/WebAssemblyToolchain+LinkerSupport.swift:126: Fatal error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/wasi/static-executable-args.lnk not found
+zsh: illegal hardware instruction  swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
+```
+
+omg I exported wrong PATH
+> the right way
+```console
+// open
+open ~/.bash_profile
+
+// new path
+export PATH=/Library/Developer/Toolchains/swift-wasm-5.8.0-RELEASE.xctoolchain/usr/bin:"${PATH}"
+
+// apply changes
+source ~/.bash_profile
+
+//re run
+swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
+```
+
