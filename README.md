@@ -59,7 +59,7 @@ swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
 wasmer hello.wasm
 ```
 
-### another way using swift package manager:
+#### another way using swift package manager:
 
 ```console
 swift package init --type executable
